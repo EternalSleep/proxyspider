@@ -1,3 +1,5 @@
+'''Get proxies from cnproxy.com'''
+
 import requests
 import re
 
