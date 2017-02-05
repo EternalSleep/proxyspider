@@ -29,8 +29,6 @@ def proxyinmongo(mongoaddr,mongoport,dbname,collectioname,proxy_list,links):
 
     for link in links:
         reach_proxy = checkproxy(proxy_list,link)
-        print link
-        print reach_proxy
         for proxy in reach_proxy:
             db[collectioname].insert_one({'destination':link,
                                           'proxy':proxy,
