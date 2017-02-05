@@ -25,8 +25,6 @@ def proxyinmongo(mongoaddr,mongoport,dbname,collectioname,proxy_list,links):
     client = pymongo.MongoClient(host=mongoaddr, port=mongoport)
     db = client[dbname]
 
-    link_chain = {}
-
     for link in links:
         reach_proxy = checkproxy(proxy_list,link)
         for proxy in reach_proxy:
